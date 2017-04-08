@@ -12,9 +12,29 @@ app.get('/', function(req, res) {
 	res.render('pages/index');
 });
 
-// about page
-app.get('/about', function(req, res) {
-	res.render('pages/about');
+// login page
+app.get('/login', function(req, res) {
+	res.render('pages/login');
+});
+
+// register page
+app.get('/register', function(req, res) {
+	res.render('pages/register');
+});
+
+// main page
+app.get('/main', function(req, res) {
+	res.render('pages/main');
+});
+
+// post page
+app.get('/post', function(req, res) {
+	res.render('pages/post');
+});
+
+// search page
+app.get('/search', function(req, res) {
+	res.render('pages/search');
 });
 
 app.listen(3000);
