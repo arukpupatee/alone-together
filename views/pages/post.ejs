@@ -40,7 +40,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/post">Looking <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">Looking <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -60,7 +60,75 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<section style="width:500px";>
+	I want to
+<div class="btn-group">
+  <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    please select<span class="caret"></span>
+  </button>
+	<ul class="dropdown-menu">
+	<li><a href="#">Watch Movies</a></li>
+	<li><a href="#">Dinner</a></li>
+	<li><a href="#">Hangout</a></li>
+	<li><a href="#">Workout</a></li>
+</ul>
+  </ul>
 
+</div>
+	<input type="text" class="form-control" placeholder="Specific...">
+</br>
+with <div class="btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">MALE</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">FEMALE</button>
+  </div>
+</div>
+</br>
+<input type="text" class="form-control" placeholder="How many people do you want">
+</br>
+AGE
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">below 20</button>
+  </div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-default">21-30</button>
+	</div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">over 30</button>
+  </div>
+</div>
+
+</br>
+
+Location
+<input type="text" class="form-control" placeholder="Where?">
+</br>
+
+
+Time
+
+<div class="input-group">
+		 <input type="text" class="form-control" aria-label="..." placeholder="from...">
+		 <div class="input-group-btn">
+			 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM<span class="caret"></span></button>
+			 <ul class="dropdown-menu dropdown-menu-right">
+				 <li><a href="#">PM</a></li>
+		 </div><!-- /btn-group -->
+		 <input type="text" class="form-control" aria-label="..." placeholder="to...">
+		 <div class="input-group-btn">
+			 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM<span class="caret"></span></button>
+			 <ul class="dropdown-menu dropdown-menu-right">
+				 <li><a href="#">PM</a></li>
+			 </ul>
+		 </div><!-- /btn-group -->
+	 </div><!-- /input-group -->
+
+</br>
+<button class="btn btn-default" type="button" name="button"> FIND!</button>
+</section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
