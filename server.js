@@ -5,6 +5,9 @@ var app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+// use static file
+app.use( express.static( "public" ) );
+
 // use res.render to load up an ejs view file
 
 // index page
