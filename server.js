@@ -40,5 +40,10 @@ app.get('/search', function(req, res) {
 	res.render('pages/search');
 });
 
+// success
+app.get('/success', function(req, res) {
+	res.render('pages/success');
+});
+
 app.listen(3000);
 console.log('Connect to server');
