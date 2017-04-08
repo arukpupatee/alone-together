@@ -45,14 +45,19 @@ app.get('/success', function(req, res) {
 	res.render('pages/success');
 });
 
-// success
+// waiting
 app.get('/waiting', function(req, res) {
 	res.render('pages/waiting');
 });
 
-// success
+// profile
 app.get('/profile', function(req, res) {
 	res.render('pages/profile');
+});
+
+// profile-after
+app.get('/profile-after', function(req, res) {
+	res.render('pages/profile-after');
 });
 
 app.listen(3000);
