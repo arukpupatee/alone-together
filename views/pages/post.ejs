@@ -66,7 +66,7 @@
   </ul>
 
 </div>
-	<input type="text" class="form-control" placeholder="Specific...">
+	<input type="text" class="form-control" placeholder="Specific..." id="specific">
 </br>
 with <div class="btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
@@ -77,7 +77,7 @@ with <div class="btn-group-justified" role="group" aria-label="...">
   </div>
 </div>
 </br>
-<input type="text" class="form-control" placeholder="How many people do you want">
+<input type="text" class="form-control" placeholder="How many people do you want" id="people">
 </br>
 AGE
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -95,20 +95,20 @@ AGE
 </br>
 
 Location
-<input type="text" class="form-control" placeholder="Where?">
+<input type="text" class="form-control" placeholder="Where?" id="location">
 </br>
 
 
 Time
 
 <div class="input-group">
-		 <input type="text" class="form-control" aria-label="..." placeholder="from...">
+		 <input type="text" class="form-control" aria-label="..." placeholder="from..." id="time-from">
 		 <div class="input-group-btn">
 			 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM<span class="caret"></span></button>
 			 <ul class="dropdown-menu dropdown-menu-right">
 				 <li><a href="#">PM</a></li>
 		 </div><!-- /btn-group -->
-		 <input type="text" class="form-control" aria-label="..." placeholder="to...">
+		 <input type="text" class="form-control" aria-label="..." placeholder="to..." id="time-to">
 		 <div class="input-group-btn">
 			 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AM<span class="caret"></span></button>
 			 <ul class="dropdown-menu dropdown-menu-right">
@@ -126,7 +126,7 @@ Time
 <li role="presentation" style="
   border: 1px solid;
   margin-left: 8px;
-"><a href="#">Demo!</a></li>
+"><a href="#" onClick="demo()">Demo!</a></li>
 </ul>
 </section>
 
@@ -175,6 +175,16 @@ function select_age(change_age){
     document.getElementById("age_21-30_btn").className = "btn btn-default";
     document.getElementById("age_over30_btn").className = "btn btn-primary";
   }
+}
+
+function demo(){
+  select_category("Watch Movies");
+  document.getElementById("specific").value = "Ghost in the Shell";
+  select_sex("MALE");
+  document.getElementById("location").value = "Major Cineplex Ratchayothin";
+  select_age("21-30");
+  document.getElementById("time-from").value = "9";
+  document.getElementById("time-to").value = "12";
 }
 
 </script>
