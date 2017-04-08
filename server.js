@@ -45,5 +45,15 @@ app.get('/success', function(req, res) {
 	res.render('pages/success');
 });
 
+// success
+app.get('/waiting', function(req, res) {
+	res.render('pages/waiting');
+});
+
+// success
+app.get('/profile', function(req, res) {
+	res.render('pages/profile');
+});
+
 app.listen(3000);
 console.log('Connect to server');
