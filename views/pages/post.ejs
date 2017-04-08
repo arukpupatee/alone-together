@@ -63,14 +63,15 @@
 <section style="width:500px";>
 	I want to
 <div class="btn-group">
-  <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-default btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="category_selector">
     please select<span class="caret"></span>
   </button>
 	<ul class="dropdown-menu">
-	<li><a href="#">Watch Movies</a></li>
-	<li><a href="#">Dinner</a></li>
-	<li><a href="#">Hangout</a></li>
-	<li><a href="#">Workout</a></li>
+	<li><a href="#" onClick="select_category(this.innerHTML)">Watch Movies</a></li>
+	<li><a href="#" onClick="select_category(this.innerHTML)">Dinner</a></li>
+	<li><a href="#" onClick="select_category(this.innerHTML)">Hangout</a></li>
+	<li><a href="#" onClick="select_category(this.innerHTML)">Workout</a></li>
+  <li><a href="#" onClick="select_category(this.innerHTML)">Play Sports</a></li>
 </ul>
   </ul>
 
@@ -79,10 +80,10 @@
 </br>
 with <div class="btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">MALE</button>
+    <button type="button" class="btn btn-default" onClick="select_sex(this.innerHTML)" id="sex_male_btn">MALE</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">FEMALE</button>
+    <button type="button" class="btn btn-default" onClick="select_sex(this.innerHTML)" id="sex_female_btn">FEMALE</button>
   </div>
 </div>
 </br>
@@ -91,13 +92,13 @@ with <div class="btn-group-justified" role="group" aria-label="...">
 AGE
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">below 20</button>
+    <button type="button" class="btn btn-default" onClick="select_age(this.innerHTML)" id="age_below20_btn">below 20</button>
   </div>
 	<div class="btn-group" role="group">
-		<button type="button" class="btn btn-default">21-30</button>
+		<button type="button" class="btn btn-default" onClick="select_age(this.innerHTML)" id="age_21-30_btn">21-30</button>
 	</div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">over 30</button>
+    <button type="button" class="btn btn-default" onClick="select_age(this.innerHTML)" id="age_over30_btn">over 30</button>
   </div>
 </div>
 
@@ -136,4 +137,47 @@ Time
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
+
+<script>
+
+function select_category(category){
+  var category_selector = document.getElementById("category_selector");
+  category_selector.innerHTML = category;
+}
+
+var sex_state = "";
+function select_sex(change_sex){
+  sex_state = change_sex;
+  if(sex_state == "MALE"){
+    document.getElementById("sex_male_btn").className = "btn btn-primary";
+    document.getElementById("sex_female_btn").className = "btn btn-default";
+  }
+  else {
+    document.getElementById("sex_male_btn").className = "btn btn-default";
+    document.getElementById("sex_female_btn").className = "btn btn-primary";
+  }
+}
+
+var age_state = "";
+function select_age(change_age){
+  age_state = change_age;
+  if(age_state == "below 20"){
+    document.getElementById("age_below20_btn").className = "btn btn-primary";
+    document.getElementById("age_21-30_btn").className = "btn btn-default";
+    document.getElementById("age_over30_btn").className = "btn btn-default";
+  }
+  else if(age_state == "21-30") {
+    document.getElementById("age_below20_btn").className = "btn btn-default";
+    document.getElementById("age_21-30_btn").className = "btn btn-primary";
+    document.getElementById("age_over30_btn").className = "btn btn-default";
+  }
+  else {
+    document.getElementById("age_below20_btn").className = "btn btn-default";
+    document.getElementById("age_21-30_btn").className = "btn btn-default";
+    document.getElementById("age_over30_btn").className = "btn btn-primary";
+  }
+}
+
+</script>
+
 </html>
